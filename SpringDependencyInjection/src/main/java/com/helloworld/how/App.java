@@ -10,8 +10,9 @@ public class App {
 		ApplicationContext context= new FileSystemXmlApplicationContext("beans.xml");
 		
 		
-		Guitar guitar = (Guitar)context.getBean("guitar");
-		guitar.play();
+		Car car = (Car)context.getBean("car");
+		car.drive();
+		System.out.println(car);
 	}
 
 }
