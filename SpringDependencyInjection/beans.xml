@@ -4,5 +4,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="car" class="com.helloworld.how.Car"></bean>
+	<bean id="car" class="com.helloworld.how.Car">
+
+
+	<constructor-arg type="String" value="Opel" name="types"></constructor-arg>
+	<constructor-arg type="int" value="1" name="id"></constructor-arg>
+	<property name="color" ref="color"></property>
+	</bean>
+	<bean id="color" class="com.helloworld.how.Color">
+		<constructor-arg name="color" value="red" type="String"></constructor-arg>
+		<constructor-arg name="special" type="String"
+			value="fire mark">
+		</constructor-arg>
+	</bean>
 </beans>
